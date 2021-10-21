@@ -6,9 +6,9 @@ Criado em 07/10/2021 para a aula de programação avançada
 
 # Gerar um gráfico de barras a partir da base "foods.db"
 
-#----------------------------
+# ----------------------------
 # PARTE 1: DATA WRANGLING (transformar os dados)
-#----------------------------
+# ----------------------------
 
 import sqlite3
 import pandas as pd
@@ -41,12 +41,11 @@ tipos_comida = [t[0] for t in resultados if t[1] == 8]
 freq_temp8 = [t[2] for t in resultados if t[1] == 8]
 freq_temp9 = [t[2] for t in resultados if t[1] == 9]
 
-
 df = pd.DataFrame({'t9': freq_temp9, 't8': freq_temp8}, index=tipos_comida)
 
-#----------------------------
+# ----------------------------
 # PARTE 2: ESTATÍSTICA (gerar o gráfico)
-#----------------------------
+# ----------------------------
 
 ax = df.plot.barh()
 plt.show()

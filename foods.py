@@ -12,6 +12,7 @@ Criado em 07/10/2021 para a aula de programação avançada
 
 import sqlite3
 import pandas as pd
+import matplotlib.pyplot as plt
 
 # conexão com o "foods.db"
 conn = sqlite3.connect('C:/Users/chico/PycharmProjects/prog_avan/foods.db')
@@ -48,3 +49,4 @@ df = pd.DataFrame({'t9': freq_temp9, 't8': freq_temp8}, index=tipos_comida)
 #----------------------------
 
 ax = df.plot.barh()
+plt.show()
